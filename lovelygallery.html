@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Lovely Textiles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:rgb(176, 175, 175);
+        }
+        header {
+            background-color:rgb(228, 210, 210);
+            color: #000000;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #382c29;
+        }
+        nav a {
+            color: #e7e2e2;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            background-color: #000000;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color:white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            color: #000000;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .modal-content, #caption {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+        @keyframes zoom {
+            from {transform:scale(0)} 
+            to {transform:scale(1)}
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lovely Textiles</h1>
+    </header>
+    <nav>
+        <a href="lovelyhome.html">Home</a>
+        <a href="aboutLovely.html">About Us</a>
+        <a href="lovelyproduct.html">Products</a>
+        <a href="lovelygallery.html">Gallery</a>
+        <a href="lovely testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="container">
+        <section id="gallery" class="section">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="ss6.jpg" alt="Gallery Image 1">
+                <img src="ss2.jpg" alt="Gallery Image 2">
+                <img src="ss3.jpg" alt="Gallery Image 3">
+                <img src="ss4.jpg" alt="Gallery Image 4">
+                <img src="ss5.webp" alt="Gallery Image 5">
+                <img src="ww1.jpg" alt="Gallery Image 6">
+                <img src="ww2.webp" alt="Gallery Image 7">
+                <img src="ww3.jpg" alt="Gallery Image 8">
+                <img src="ww4.webp" alt="Gallery Image 9">
+                <img src="ww5.webp" height="350" alt="Gallery Image 10">
+                <img src="cc1.jpg" alt="Gallery Image 11">
+                <img src="cc2.avif" alt="Gallery Image 12">
+                <img src="cc3.webp" alt="Gallery Image 13">
+                <img src="cc4.jpg" alt="Gallery Image 14">
+                <img src="cc1.jpg" alt="Gallery Image 15">
+                <img src="sy1.webp" alt="Gallery Image 16">
+                <img src="sy2.webp" alt="Gallery Image 17">
+                <img src="sy3.webp" alt="Gallery Image 18">
+                <img src="sy4.jpg" alt="Gallery Image 19">
+                <img src="sy5.jpg" alt="Gallery Image 20">
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>© 2024 Lovely Textiles. All rights reserved.</p>
+    </footer>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">×</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the images and insert them inside the modal - use its "alt" text as a caption
+        var images = document.querySelectorAll('.gallery img');
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        images.forEach(img => {
+            img.onclick = function(){
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        });
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>

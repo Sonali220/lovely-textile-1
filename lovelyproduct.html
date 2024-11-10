@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Lovely Textiles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:#bebebe;
+        }
+        header {
+            background-color:rgb(231, 210, 214);
+            color: #1d1b1b;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #322a2f;
+        }
+        nav a {
+            color: #f2f0f1;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            background-color:rgb(221, 212, 213);
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color:rgb(128, 125, 125);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            color: #000000;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .product {
+            flex: 1 1 calc(20% - 20px);
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            position: relative;
+            overflow: hidden; /* Ensure the zoom effect is contained */
+        }
+        .product img {
+            max-width: 100%;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s ease; /* Smooth transition */
+        }
+        .product img.zoomed {
+            transform: scale(2); /* Zoom scale factor */
+            z-index: 10; /* Ensure zoomed image is on top */
+            position: relative; /* Ensure zoomed image stays in place */
+        }
+        .product h3 {
+            margin: 10px 0;
+            color: #000000;
+        }
+        .price {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #ff5722; /* Orange color for the price tag */
+            font-weight: bold;
+        }
+        footer {
+            background-color:rgb(60, 56, 56);
+            color: #000000;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lovely Textiles</h1>
+    </header>
+    <nav>
+        <a href="lovelyhome.html">Home</a>
+        <a href="aboutLovely.html">About Us</a>
+        <a href="lovelyproduct.html">Products</a>
+        <a href="lovelygallery.html">Gallery</a>
+        <a href="lovelygallery.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="container">
+        <section id="cotton" class="section">
+            <h2>Cotton Fabrics</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="cc1.jpg" width="400" height="550" alt="Cotton Design 1">
+                    <h3>Cotton Saree</h3>
+                    <p class="price">rs4500.00</p>
+                </div>
+                <div class="product">
+                    <img src="cc2.avif" width="400" height="550" alt="Cotton Design 2">
+                    <h3>Cotton Saree</h3>
+                    <p class="price">rs1800.00</p>
+                </div>
+                <div class="product">
+                    <img src="cc3.webp" width="400" height="550" alt="Cotton Design 3">
+                    <h3>Cotton Saree</h3>
+                    <p class="price">rs2550.00</p>
+                </div>
+                <div class="product">
+                    <img src="cc4.jpg" width="400" height="550" alt="Cotton Design 4">
+                    <h3>Cotton Saree</h3>
+                    <p class="price">rs3600.00</p>
+                </div>
+                <div class="product">
+                    <img src="cc5.jpeg" width="400" height="550" alt="Cotton Design 5">
+                    <h3>Cotton Saree</h3>
+                    <p class="price">rs6500.00</p>
+                </div>
+            </div>
+        </section>
+        <section id="silk" class="section">
+            <h2>Silk Fabrics</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="ss2.jpg" width="400" height="550" alt="Silk Design 1">
+                    <h3>Silk Saree</h3>
+                    <p class="price">rs7500.00</p>
+                </div>
+                <div class="product">
+                    <img src="ss3.jpg" width="400" height="550" alt="Silk Design 2">
+                    <h3>Silk Saree</h3>
+                    <p class="price">rs8000.00</p>
+                </div>
+                <div class="product">
+                    <img src="ss5.webp" width="400" height="550" alt="Silk Design 3">
+                    <h3>Silk Saree</h3>
+                    <p class="price">rs6000.00</p>
+                </div>
+                <div class="product">
+                    <img src="ss6.jpg" width="400" height="550" alt="Silk Design 4">
+                    <h3>Silk Saree</h3>
+                    <p class="price">rs9000.00</p>
+                </div>
+                <div class="product">
+                    <img src="ss4.jpg" width="400" height="550" alt="Silk Design 5">
+                    <h3>Silk Saree</h3>
+                    <p class="price">rs9500.00</p>
+                </div>
+            </div>
+        </section>
+        <section id="wool" class="section">
+            <h2>Wool Fabrics</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="ww1.jpg" width="400" height="550" alt="Wool Design 1">
+                    <h3>Wool Saree</h3>
+                    <p class="price">rs10000.00</p>
+                </div>
+                <div class="product">
+                    <img src="ww2.webp" width="400" height="550" alt="Wool Design 2">
+                    <h3>Wool Saree</h3>
+                    <p class="price">rs10500.00</p>
+                </div>
+                <div class="product">
+                    <img src="ww3.jpg" width="400" height="550" alt="Wool Design 3">
+                    <h3>Wool Saree</h3>
+                    <p class="price">rs11000.00</p>
+                </div>
+                <div class="product">
+                    <img src="ww4.webp" width="400" height="550" alt="Wool Design 4">
+                    <h3>Wool Saree</h3>
+                    <p class="price">rs7115.00</p>
+                </div>
+                <div class="product">
+                    <img src="ww5.webp" width="900" height="550" alt="Wool Design 5">
+                    <h3>Wool Saree</h3>
+                    <p class="price">rs21120.00</p>
+                </div>
+            </div>
+        </section>
+        <section id="synthetic" class="section">
+            <h2>Synthetic Fabrics</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="sy1.webp" width="400" height="550" alt="Synthetic Design 1">
+                    <h3>Synthetic Saree</h3>
+                    <p class="price">rs3500.00</p>
+                </div>
+                <div class="product">
+                    <img src="sy2.webp" width="400" height="550" alt="Synthetic Design 2">
+                    <h3>Synthetic Saree</h3>
+                    <p class="price">rs4000.00</p>
+                </div>
+                <!-- Add more synthetic fabric products here -->
+            </div>
+        </section>
+    </div>
+    <footer>
+        &copy; 2024 Lovely Textiles. All rights reserved.
+    </footer>
+
+    <!-- JavaScript for image zoom -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get all product images
+            const images = document.querySelectorAll('.product img');
+            
+            // Add click event listener to each image
+            images.forEach(img => {
+                img.addEventListener('click', () => {
+                    // Toggle the 'zoomed' class
+                    img.classList.toggle('zoomed');
+                });
+            });
+
+            // Optional: Click outside to close zoomed image
+            document.addEventListener('click', (event) => {
+                if (!event.target.matches('.product img')) {
+                    images.forEach(img => {
+                        img.classList.remove('zoomed');
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

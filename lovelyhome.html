@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lovely Textiles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:rgb(132, 129, 129);
+        }
+        header {
+            background-color:rgb(228, 210, 210);
+            color: #000000;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #322a2f;
+        }
+        nav a {
+            color: #e6e0e0;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            background-color: #b4bee3;
+        }
+        .search-login {  /* HIGHLIGHTED */
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            display: flex;
+            gap: 10px;
+        }
+        .search-bar {  /* HIGHLIGHTED */
+            display: flex;
+        }
+        .search-bar input[type="text"] {  /* HIGHLIGHTED */
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .search-bar button {  /* HIGHLIGHTED */
+            padding: 5px 10px;
+            background-color: #78aeda;
+            color: #000000;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .search-bar button:hover {  /* HIGHLIGHTED */
+            background-color: white;
+        }
+        .login-button {  /* HIGHLIGHTED */
+            padding: 5px 15px;
+            background-color: #78aeda;
+            color: #000000;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .login-button:hover {  /* HIGHLIGHTED */
+            background-color: white;
+        }
+
+        .hero {
+            background-image: url('hero-image.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+        .hero button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #78aeda;
+            color: #000000;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .hero button:hover {
+            background-color: white;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color:rgb(179, 174, 174);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            color: #64002f;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .product {
+            flex: 1 1 calc(33.333% - 20px);
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .product img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .product h3 {
+            margin: 10px 0;
+            color: #ff4500;
+        }
+        footer {
+            background-color: #483a43;
+            color: #000000;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><b>Lovely Textiles</b></h1>
+   
+    <!-- Added search bar and login -->
+    <div class="search-login">  <!-- HIGHLIGHTED -->
+        <div class="search-bar">  <!-- HIGHLIGHTED -->
+            <input type="text" placeholder="Search...">  <!-- HIGHLIGHTED -->
+            <button type="submit">Search</button>  <!-- HIGHLIGHTED -->
+        </div>
+        <button class="login-button">Login</button>  <!-- HIGHLIGHTED -->
+    </div>
+    <!-- End of added section -->
+    </header>
+    <nav>
+        <a href="lovelyhome.html">Home</a>
+        <a href="aboutLovely.html">About Us</a>
+        <a href="lovelyproduct.html">Products</a>
+        <a href="lovelygallery.html">Gallery</a>
+        <a href="lovely testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="hero">
+        <h1>Welcome to Lovely Textiles</h1>
+        <p>Your one-stop shop for high-quality textiles.</p>
+        <button><a href="lovelyproduct.html">Shop Now</a></button>
+    </div>
+    <div class="container">
+        <section id="featured-products" class="section">
+            <h2>Featured Products</h2>
+            <div class="products">
+                <div class="product">
+                    <a href="lovelygallery.html"><img src="c1.jpg" alt="Cotton Fabric"></a>
+                    <h3>Cotton Fabric</h3>
+                    <p>High-quality cotton fabric for all your needs.</p>
+                </div>
+                <div class="product">
+                    <a href="lovelygallery.html"> <img src="ss1.jpg" alt="Silk Fabric"></a>
+                    <h3>Silk Fabric</h3>
+                    <p>Luxurious silk fabric for elegant designs.</p>
+                </div>
+                <div class="product">
+                    <a href="lovelygallery.html"><img src="w1.jpg" alt="Wool Fabric"></a>
+                    <h3>Wool Fabric</h3>
+                    <p>Warm and durable wool fabric for winter wear.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>© 2024 Lovely Textiles. All rights reserved.</p>
+    </footer>
+</body>
+</html>
